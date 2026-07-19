@@ -25,7 +25,7 @@ export default function Navbar() {
           <img
             src={chromeMoon}
             alt="Chrome Crescent Moon Logo"
-            className="w-full h-full object-cover scale-110 pointer-events-none"
+            className="w-full h-full object-cover pointer-events-none scale-x-[-1.1] scale-y-[1.1]"
             referrerPolicy="no-referrer"
           />
         </motion.div>
