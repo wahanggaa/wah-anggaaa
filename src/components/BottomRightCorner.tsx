@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
 
 export default function BottomRightCorner() {
   return (
@@ -27,8 +26,32 @@ export default function BottomRightCorner() {
       </div>
 
       {/* Circle Icon */}
-      <div className="bg-[rgba(30,50,90,0.05)] w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center border border-[rgba(30,50,90,0.1)]">
-        <ArrowUpRight className="w-5 h-5 text-[rgba(30,50,90,0.8)]" />
+      <div className="bg-[rgba(30,50,90,0.05)] w-10 h-10 md:w-14 md:h-14 rounded-full flex items-center justify-center border border-[rgba(30,50,90,0.1)] overflow-hidden">
+        <svg
+          viewBox="0 0 100 100"
+          className="w-7 h-7 md:w-10 md:h-10 text-[rgba(30,50,90,0.9)]"
+          fill="currentColor"
+        >
+          {/* Central sun core */}
+          <circle cx="50" cy="50" r="16" />
+          
+          {/* Programmatically rotated wavy boho rays */}
+          {Array.from({ length: 16 }, (_, i) => {
+            const angle = (i * 360) / 16;
+            const isEven = i % 2 === 0;
+            return (
+              <path
+                key={i}
+                d={
+                  isEven
+                    ? "M 47 34 C 41 20, 59 12, 50 2 C 55 16, 48 22, 53 34 Z"
+                    : "M 48 35 C 44 24, 56 18, 50 14 C 53 22, 49 26, 52 35 Z"
+                }
+                transform={`rotate(${angle} 50 50)`}
+              />
+            );
+          })}
+        </svg>
       </div>
 
       {/* Info Column */}
