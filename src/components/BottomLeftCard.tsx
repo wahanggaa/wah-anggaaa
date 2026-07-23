@@ -16,7 +16,7 @@ export default function BottomLeftCard() {
         {/* Discord Column */}
         <div className="flex flex-col items-center gap-2">
           <motion.a
-            href="https://discord.gg/wNmhh6v47"
+            href="https://discord.gg/kMWvjSDtjM"
             target="_blank"
             rel="noopener noreferrer"
             id="discord-btn"
